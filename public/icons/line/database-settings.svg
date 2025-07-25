@@ -1,0 +1,7 @@
+<svg width="32" height="32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+   <path d="M4 6v6s0 3 7 3 7-3 7-3V6"></path>
+   <path d="M11 3c7 0 7 3 7 3s0 3-7 3-7-3-7-3 0-3 7-3Z"></path>
+   <path d="M11 21c-7 0-7-3-7-3v-6"></path>
+   <path d="M19 21a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path>
+   <path stroke-dasharray="0.3 2" d="M19 22a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"></path>
+</svg>

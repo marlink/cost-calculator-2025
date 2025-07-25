@@ -1,0 +1,10 @@
+<svg width="32" height="32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+   <path d="m4 16.003.01-.01"></path>
+   <path d="m4 20.003.01-.01"></path>
+   <path d="m8 20.003.01-.01"></path>
+   <path d="m12 20.003.01-.01"></path>
+   <path d="m16 20.003.01-.01"></path>
+   <path d="m20 20.003.01-.01"></path>
+   <path d="m20 16.003.01-.01"></path>
+   <path d="M4 12V4h16v8H4Z"></path>
+</svg>

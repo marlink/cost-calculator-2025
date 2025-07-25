@@ -1,0 +1,13 @@
+<svg width="32" height="32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+   <path d="M6 5v2"></path>
+   <path d="M10 5v6"></path>
+   <path d="M18 5v1"></path>
+   <path d="M6 10v6"></path>
+   <path d="M6 18.5v.5"></path>
+   <path d="M10 18.5v.5"></path>
+   <path d="M10 14v2"></path>
+   <path d="M14 13v2"></path>
+   <path d="M14 5v5"></path>
+   <path d="M18 9v4"></path>
+   <path d="m15 19 2 2 4-4"></path>
+</svg>

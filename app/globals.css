@@ -1,0 +1,348 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --radius: 0.75rem;
+    
+    /* Extended Color Palette */
+    --emerald-50: 236 253 245;
+    --emerald-500: 16 185 129;
+    --emerald-600: 5 150 105;
+    --emerald-700: 4 120 87;
+    --emerald-900: 6 78 59;
+    
+    --purple-50: 250 245 255;
+    --purple-500: 147 51 234;
+    --purple-600: 126 34 206;
+    --purple-700: 109 40 217;
+    --purple-900: 88 28 135;
+    
+    --orange-50: 255 247 237;
+    --orange-500: 249 115 22;
+    --orange-600: 234 88 12;
+    --orange-700: 194 65 12;
+    --orange-900: 154 52 18;
+    
+    --blue-50: 239 246 255;
+    --blue-500: 59 130 246;
+    --blue-600: 37 99 235;
+    --blue-700: 29 78 216;
+    --blue-900: 30 58 138;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1, "kern" 1, "liga" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  
+  /* Consistent Typography System */
+  h1 {
+    @apply text-5xl md:text-7xl font-thin tracking-[-0.02em] leading-[0.9];
+  }
+  
+  h2 {
+    @apply text-3xl md:text-4xl font-light tracking-[-0.01em] leading-tight;
+  }
+  
+  h3 {
+    @apply text-xl md:text-2xl font-light tracking-[-0.01em] leading-tight;
+  }
+  
+  h4 {
+    @apply text-lg md:text-xl font-light tracking-[-0.01em] leading-tight;
+  }
+  
+  h5 {
+    @apply text-base md:text-lg font-light tracking-[-0.01em] leading-tight;
+  }
+  
+  h6 {
+    @apply text-sm md:text-base font-light tracking-[-0.01em] leading-tight;
+  }
+}
+
+/* Enhanced Glow Effects */
+@layer components {
+  .glow-card {
+    box-shadow: 0 0 5px rgba(16, 185, 129, 0.2);
+    transition: box-shadow 0.3s ease;
+  }
+  .glow-card:hover {
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.4), 0 0 40px rgba(16, 185, 129, 0.1);
+  }
+
+  .glow-button {
+    box-shadow: 0 0 3px rgba(16, 185, 129, 0.3);
+    transition: box-shadow 0.3s ease;
+  }
+  .glow-button:hover {
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.6), 0 0 30px rgba(16, 185, 129, 0.2);
+  }
+}
+
+/* Enhanced Button System */
+@layer components {
+  .btn-base {
+    @apply inline-flex items-center justify-center rounded-xl px-6 py-3 text-sm font-medium;
+    @apply transition-all duration-300 ease-in-out;
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2;
+    @apply disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-primary {
+    @apply btn-base text-white bg-gradient-to-r from-emerald-500 to-teal-500;
+    @apply shadow-lg shadow-emerald-500/25 hover:shadow-xl hover:shadow-emerald-500/40;
+    @apply focus:ring-emerald-500/50 hover:-translate-y-0.5;
+  }
+
+  .btn-secondary {
+    @apply btn-base bg-slate-800/50 text-slate-200 border border-slate-600/30;
+    @apply shadow-lg shadow-black/20 hover:bg-slate-700/50 hover:text-white;
+    @apply focus:ring-slate-500/50 hover:-translate-y-0.5;
+  }
+
+  .btn-outline {
+    @apply btn-base bg-transparent border-2 border-emerald-500 text-emerald-400;
+    @apply hover:bg-emerald-500 hover:text-white focus:ring-emerald-500/50;
+  }
+
+  .btn-ghost {
+    @apply btn-base bg-transparent border-0 shadow-none text-slate-400;
+    @apply hover:bg-slate-800/30 hover:text-white;
+  }
+
+  .btn-purple {
+    @apply btn-base text-white bg-gradient-to-r from-purple-500 to-purple-600;
+    @apply shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-purple-500/40;
+    @apply focus:ring-purple-500/50 hover:-translate-y-0.5;
+  }
+
+  .btn-orange {
+    @apply btn-base text-white bg-gradient-to-r from-orange-500 to-orange-600;
+    @apply shadow-lg shadow-orange-500/25 hover:shadow-xl hover:shadow-orange-500/40;
+    @apply focus:ring-orange-500/50 hover:-translate-y-0.5;
+  }
+
+  .btn-blue {
+    @apply btn-base text-white bg-gradient-to-r from-blue-500 to-blue-600;
+    @apply shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40;
+    @apply focus:ring-blue-500/50 hover:-translate-y-0.5;
+  }
+
+  .btn-small { @apply px-4 py-2 text-xs; }
+  .btn-large { @apply px-8 py-4 text-base; }
+  .btn-icon { @apply gap-2; }
+}
+
+/* Card System */
+@layer components {
+  .card-base {
+    @apply rounded-2xl transition-all duration-300 ease-in-out;
+  }
+
+  .card-primary {
+    @apply card-base bg-gradient-to-br from-emerald-500/10 to-teal-500/10;
+    @apply border-2 border-emerald-500/30 shadow-xl shadow-emerald-500/20;
+    @apply hover:shadow-2xl hover:shadow-emerald-500/30 hover:border-emerald-400/50;
+  }
+
+  .card-secondary {
+    @apply card-base bg-slate-800/30 border border-slate-600/30;
+    @apply shadow-lg shadow-black/20 hover:bg-slate-800/50;
+    @apply hover:shadow-xl hover:shadow-black/30;
+  }
+
+  .card-tertiary {
+    @apply card-base bg-transparent border border-slate-600/20;
+    @apply hover:border-slate-500/40 hover:bg-slate-900/20;
+  }
+
+  .card-purple {
+    @apply card-base bg-gradient-to-br from-purple-500/10 to-purple-600/10;
+    @apply border-2 border-purple-500/30 shadow-xl shadow-purple-500/20;
+  }
+
+  .card-orange {
+    @apply card-base bg-gradient-to-br from-orange-500/10 to-orange-600/10;
+    @apply border-2 border-orange-500/30 shadow-xl shadow-orange-500/20;
+  }
+
+  .card-blue {
+    @apply card-base bg-gradient-to-br from-blue-500/10 to-blue-600/10;
+    @apply border-2 border-blue-500/30 shadow-xl shadow-blue-500/20;
+  }
+}
+
+/* Enhanced Form Controls */
+@layer components {
+  /* Improved Dropdown Visibility */
+  .dropdown-content {
+    @apply bg-slate-800 border border-slate-600/50 shadow-2xl shadow-black/50;
+  }
+  
+  .dropdown-item {
+    @apply text-white hover:bg-slate-700 hover:text-white;
+    @apply px-4 py-3 transition-colors duration-200;
+  }
+  
+  .dropdown-item:hover {
+    @apply bg-slate-700/80 text-white;
+  }
+
+  /* Orange Slider Fills */
+  .slider-track {
+    @apply bg-slate-700;
+  }
+  
+  .slider-range {
+    @apply bg-gradient-to-r from-orange-500 to-orange-600;
+  }
+  
+  .slider-thumb {
+    @apply bg-orange-500 border-2 border-orange-400 shadow-lg shadow-orange-500/30;
+    @apply hover:bg-orange-400 hover:shadow-xl hover:shadow-orange-500/50;
+  }
+
+  /* Enhanced Selection States */
+  .checkbox-enhanced {
+    @apply w-6 h-6 rounded border-2 border-slate-600;
+    @apply checked:bg-orange-500 checked:border-orange-500;
+    @apply focus:ring-2 focus:ring-orange-500/50;
+  }
+  
+  .checkbox-enhanced:checked::after {
+    content: "✓";
+    @apply text-white font-bold text-lg flex items-center justify-center;
+  }
+
+  .radio-enhanced {
+    @apply w-6 h-6 rounded-full border-2 border-slate-600;
+    @apply checked:bg-orange-500 checked:border-orange-500;
+    @apply focus:ring-2 focus:ring-orange-500/50;
+  }
+}
+
+/* Icon System */
+@layer components {
+  .icon-base {
+    @apply w-5 h-5 stroke-current fill-none stroke-2;
+  }
+  
+  .icon-small { @apply w-4 h-4; }
+  .icon-large { @apply w-6 h-6; }
+  .icon-xl { @apply w-8 h-8; }
+}
+
+/* Footer Styles */
+@layer components {
+  .footer-base {
+    @apply bg-gradient-to-r from-slate-900 via-black to-slate-900;
+    @apply border-t border-slate-700/50;
+  }
+  
+  .footer-column {
+    @apply space-y-4;
+  }
+  
+  .footer-heading {
+    @apply text-white font-semibold text-lg mb-4;
+  }
+  
+  .footer-link {
+    @apply text-slate-400 hover:text-emerald-400 transition-colors duration-200;
+  }
+  
+  .footer-social {
+    @apply p-2 rounded-lg bg-slate-800/50 text-slate-400;
+    @apply hover:bg-emerald-500/20 hover:text-emerald-400;
+    @apply transition-all duration-200;
+  }
+
+  /* Multiple Choice Buttons */
+  .choice-button {
+    @apply relative flex items-center justify-between p-4 border-2 border-slate-700/50 rounded-xl bg-slate-900/20 hover:bg-slate-800/30 transition-all duration-200 cursor-pointer;
+  }
+  
+  .choice-button.selected {
+    @apply border-orange-500/70 bg-orange-500/10 hover:bg-orange-500/15;
+  }
+  
+  .choice-button .choice-content {
+    @apply flex-1 text-left;
+  }
+  
+  .choice-button .choice-title {
+    @apply font-semibold text-white mb-1;
+  }
+  
+  .choice-button .choice-description {
+    @apply text-sm text-slate-400;
+  }
+  
+  .choice-button .choice-tick {
+    @apply w-8 h-8 rounded-full border-2 border-slate-600 flex items-center justify-center transition-all duration-200 ml-4;
+  }
+  
+  .choice-button.selected .choice-tick {
+    @apply border-orange-500 bg-orange-500 scale-110;
+  }
+  
+  .choice-button .choice-tick svg {
+    @apply w-5 h-5 text-transparent transition-all duration-200;
+  }
+  
+  .choice-button.selected .choice-tick svg {
+    @apply text-white scale-125;
+  }
+}

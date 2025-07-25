@@ -1,0 +1,15 @@
+<svg width="32" height="32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+   <path d="m20 20.011.01-.011"></path>
+   <path d="m16 20.011.01-.011"></path>
+   <path d="m12 20.011.01-.011"></path>
+   <path d="M8 20.011 8.01 20"></path>
+   <path d="M4 20.011 4.01 20"></path>
+   <path d="M4 8.011 4.01 8"></path>
+   <path d="M4 12.011 4.01 12"></path>
+   <path d="m12 12.011.01-.011"></path>
+   <path d="M4 16.011 4.01 16"></path>
+   <path d="M20 8.011 20.01 8"></path>
+   <path d="m20 12.011.01-.011"></path>
+   <path d="m20 16.011.01-.011"></path>
+   <path d="M4 4h16"></path>
+</svg>
