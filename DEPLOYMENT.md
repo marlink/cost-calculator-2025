@@ -1,5 +1,10 @@
 # Cost Calculator - Deployment & Automation Guide
 
+## 🌐 Live Deployments
+
+- **GitHub Pages**: https://marlink.github.io/cost-calculator-2025/
+- **Vercel**: Auto-deployed on push to main
+
 ## 🚀 Quick Start
 
 ### First Time Setup
@@ -75,7 +80,13 @@ VERCEL_PROJECT_ID=your_vercel_project_id
 
 ## 📦 Deployment Platforms
 
-### Vercel (Recommended)
+### GitHub Pages (Primary)
+- **URL**: https://marlink.github.io/cost-calculator-2025/
+- **Deployment**: Automatic on push to main branch
+- **Configuration**: `.github/workflows/github-pages.yml`
+- **Always Available**: ✅ Free GitHub hosting
+
+### Vercel (Secondary)
 1. Connect your GitHub repository to Vercel
 2. Vercel will auto-deploy on every push to main
 3. Preview deployments for all PRs

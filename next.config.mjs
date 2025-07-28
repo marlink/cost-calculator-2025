@@ -7,25 +7,17 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
+    domains: ['images.unsplash.com', 'via.placeholder.com'],
     unoptimized: true,
   },
-  // Performance optimizations
   experimental: {
-    optimizeCss: true,
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
+    optimizePackageImports: ['lucide-react'],
   },
-  // Bundle analyzer for production builds
-  webpack: (config, { isServer }) => {
-    // Optimize bundle size
-    if (!isServer) {
-      config.resolve.fallback = {
-        ...config.resolve.fallback,
-        fs: false,
-      };
-    }
-    
-    return config;
-  },
+  // GitHub Pages configuration
+  output: 'export',
+  trailingSlash: true,
+  basePath: process.env.NODE_ENV === 'production' ? '/cost-calculator-2025' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/cost-calculator-2025/' : '',
 }
 
 export default nextConfig

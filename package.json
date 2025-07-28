@@ -4,11 +4,13 @@
   "private": true,
   "scripts": {
     "build": "next build",
+    "build:github": "next build && touch out/.nojekyll",
     "dev": "next dev",
     "lint": "next lint",
     "start": "next start",
     "deploy": "vercel --prod",
     "deploy:preview": "vercel",
+    "deploy:github": "npm run build:github",
     "logos": "./convert_logo.sh public/img/logo.png && ./convert_logo.sh public/img/logoA.png && ./convert_logo.sh public/img/logoB.png && ./convert_logo.sh public/img/logoC.png",
     "setup": "./dev-automation.sh setup",
     "commit": "./dev-automation.sh commit",
