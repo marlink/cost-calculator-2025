@@ -1,0 +1,53 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Clean 3D Isometric M Logo -->
+  
+  <!-- Left vertical block of M -->
+  <g>
+    <!-- Front face -->
+    <path d="M30 60 L50 60 L50 140 L30 140 Z" fill="#ffffff" stroke="none"/>
+    <!-- Top face -->
+    <path d="M30 60 L40 50 L60 50 L50 60 Z" fill="#f0f0f0" stroke="none"/>
+    <!-- Right face -->
+    <path d="M50 60 L60 50 L60 130 L50 140 Z" fill="#e0e0e0" stroke="none"/>
+  </g>
+  
+  <!-- Left diagonal block of M -->
+  <g>
+    <!-- Front face -->
+    <path d="M50 60 L80 100 L70 110 L40 70 Z" fill="#ffffff" stroke="none"/>
+    <!-- Top face -->
+    <path d="M50 60 L60 50 L90 90 L80 100 Z" fill="#f0f0f0" stroke="none"/>
+    <!-- Right face -->
+    <path d="M80 100 L90 90 L80 100 L70 110 Z" fill="#e0e0e0" stroke="none"/>
+  </g>
+  
+  <!-- Center vertical block of M -->
+  <g>
+    <!-- Front face -->
+    <path d="M85 100 L105 100 L105 140 L85 140 Z" fill="#ffffff" stroke="none"/>
+    <!-- Top face -->
+    <path d="M85 100 L95 90 L115 90 L105 100 Z" fill="#f0f0f0" stroke="none"/>
+    <!-- Right face -->
+    <path d="M105 100 L115 90 L115 130 L105 140 Z" fill="#e0e0e0" stroke="none"/>
+  </g>
+  
+  <!-- Right diagonal block of M -->
+  <g>
+    <!-- Front face -->
+    <path d="M120 100 L150 70 L160 80 L130 110 Z" fill="#ffffff" stroke="none"/>
+    <!-- Top face -->
+    <path d="M120 100 L130 90 L160 60 L150 70 Z" fill="#f0f0f0" stroke="none"/>
+    <!-- Right face -->
+    <path d="M150 70 L160 60 L170 70 L160 80 Z" fill="#e0e0e0" stroke="none"/>
+  </g>
+  
+  <!-- Right vertical block of M -->
+  <g>
+    <!-- Front face -->
+    <path d="M150 60 L170 60 L170 140 L150 140 Z" fill="#ffffff" stroke="none"/>
+    <!-- Top face -->
+    <path d="M150 60 L160 50 L180 50 L170 60 Z" fill="#f0f0f0" stroke="none"/>
+    <!-- Right face -->
+    <path d="M170 60 L180 50 L180 130 L170 140 Z" fill="#e0e0e0" stroke="none"/>
+  </g>
+</svg>

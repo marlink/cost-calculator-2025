@@ -14,7 +14,7 @@ const Homepage: React.FC = () => {
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 flex items-center justify-center">
                 <img 
-                  src="/img/logo-sharp.svg" 
+                  src="/img/logo-circle-m.svg" 
                   alt="DesignCost Logo" 
                   className="w-full h-full object-contain"
                 />
@@ -28,7 +28,7 @@ const Homepage: React.FC = () => {
               <a href="/icons" className="footer-link font-light tracking-[0.1px]">Icons</a>
               <a href="/buttons" className="footer-link font-light tracking-[0.1px]">Buttons</a>
               <Button size="sm" className="font-light tracking-[0.1px]">
-                <Icons.Login />
+                <Icons.Login className="mr-2" />
                 Get Started
               </Button>
             </nav>
@@ -47,11 +47,11 @@ const Homepage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Button size="lg" className="font-light tracking-[0.1px]">
-                <Icons.Calendar />
+                <Icons.Rocket className="mr-2" />
                 Start Calculating
               </Button>
               <Button variant="outline-dark" size="lg" className="font-light tracking-[0.1px]">
-                <Icons.Search />
+                <Icons.Eye className="mr-2" />
                 View Examples
               </Button>
             </div>
@@ -73,7 +73,7 @@ const Homepage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card variant="primary" glow className="p-8 text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Icons.Calendar className="text-white" size="large" />
+                <Icons.Target className="text-white" size="large" />
               </div>
               <CardHeader>
                 <CardTitle className="text-2xl mb-4 font-light tracking-[-0.01em] text-white">Accurate Estimates</CardTitle>
@@ -88,7 +88,7 @@ const Homepage: React.FC = () => {
 
             <Card variant="purple" glow className="p-8 text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Icons.Pencil className="text-white" size="large" />
+                <Icons.Layers className="text-white" size="large" />
               </div>
               <CardHeader>
                 <CardTitle className="text-2xl mb-4 font-light tracking-[-0.01em] text-white">Easy Customization</CardTitle>
@@ -103,7 +103,7 @@ const Homepage: React.FC = () => {
 
             <Card variant="orange" glow className="p-8 text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Icons.Check className="text-white" size="large" />
+                <Icons.Award className="text-white" size="large" />
               </div>
               <CardHeader>
                 <CardTitle className="text-2xl mb-4 font-light tracking-[-0.01em] text-white">Professional Results</CardTitle>
@@ -150,14 +150,15 @@ const Homepage: React.FC = () => {
             <h2 className="text-4xl font-light mb-6 tracking-[-0.01em] text-white">Ready to Get Started?</h2>
             <p className="text-xl text-slate-400/80 mb-8 font-light tracking-[0.2px] leading-relaxed">
               Join thousands of designers who trust DesignCost for accurate project estimates.
-            </p>12.             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="font-light tracking-[0.1px]">
-                <Icons.ArrowRight />
+                <Icons.Rocket className="mr-2" />
                 Start Your First Estimate
               </Button>
               <Button variant="outline-dark" size="lg" className="font-light tracking-[0.1px]">
-                <Icons.Search />
-                Explore Style Guide
+                <Icons.Chat className="mr-2" />
+                Let's Chat
               </Button>
             </div>
           </Card>

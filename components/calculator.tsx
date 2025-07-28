@@ -99,26 +99,36 @@ function Component() {
   const durationInDays = durationValues[durationIndex]
   const durationLabel = durationLabels[durationIndex]
 
-  // Optimized cost calculation with useMemo
-  const totalCost = useMemo(() => {
-    // Calculate base cost
-    const hourlyRate = teamSize === "designer" ? 85 : 120
+  // Calculate individual values with useMemo for performance
+  const hourlyRate = useMemo(() => {
+    return teamSize === "designer" ? 85 : 120
+  }, [teamSize])
+
+  const totalHours = useMemo(() => {
     const hoursPerDay = 8
-    const totalHours = durationInDays * hoursPerDay
-    const baseCost = totalHours * hourlyRate
+    return durationInDays * hoursPerDay
+  }, [durationInDays])
 
-    // Apply complexity multiplier
-    const complexityMultiplier = complexityMultipliers[complexity as keyof typeof complexityMultipliers]
-    const adjustedBaseCost = baseCost * complexityMultiplier
+  const baseCost = useMemo(() => {
+    return totalHours * hourlyRate
+  }, [totalHours, hourlyRate])
 
-    // Calculate extra services cost
-    const extraServicesCost = selectedServices.reduce((total, serviceId) => {
+  const complexityMultiplier = useMemo(() => {
+    return complexityMultipliers[complexity as keyof typeof complexityMultipliers]
+  }, [complexity])
+
+  const extraServicesCost = useMemo(() => {
+    return selectedServices.reduce((total, serviceId) => {
       const service = extraServices.find((s) => s.id === serviceId)
       return total + (service?.price || 0)
     }, 0)
+  }, [selectedServices])
 
+  // Optimized total cost calculation with useMemo
+  const totalCost = useMemo(() => {
+    const adjustedBaseCost = baseCost * complexityMultiplier
     return adjustedBaseCost + extraServicesCost
-  }, [teamSize, durationInDays, complexity, selectedServices])
+  }, [baseCost, complexityMultiplier, extraServicesCost])
 
   const handleServiceChange = useCallback((serviceId: string, checked: boolean) => {
     if (checked) {
@@ -622,16 +632,16 @@ function Component() {
                       {/* Premium CTA Buttons - Enhanced with emerald gradients */}
                       <div className="space-y-4">
                         <Button className="w-full btn-primary h-14 font-medium tracking-wide text-base group">
-                          <Clock className="w-5 h-5 mr-3 group-hover:rotate-12 transition-transform duration-300" />
+                          <Clock className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform duration-300" />
                           Request Detailed Proposal
-                          <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform duration-300" />
+                          <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                         </Button>
 
                         <Button
                           variant="outline"
                           className="w-full btn-secondary h-14 font-light tracking-wide group"
                         >
-                          <Calendar className="w-5 h-5 mr-3 transition-transform duration-300" />
+                          <Calendar className="w-5 h-5 mr-2 transition-transform duration-300" />
                           Schedule Consultation
                         </Button>
                       </div>

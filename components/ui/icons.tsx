@@ -3,46 +3,196 @@ import React from 'react';
 interface IconProps {
   className?: string;
   size?: 'small' | 'base' | 'large' | 'xl';
+  fill?: 'none' | 'currentColor';
+  stroke?: string;
+  strokeWidth?: number;
 }
 
 const getIconSize = (size: IconProps['size'] = 'base') => {
   switch (size) {
-    case 'small': return 'icon-small';
-    case 'large': return 'icon-large';
-    case 'xl': return 'icon-xl';
-    default: return 'icon-base';
+    case 'small': return 'w-4 h-4';
+    case 'large': return 'w-6 h-6';
+    case 'xl': return 'w-8 h-8';
+    default: return 'w-5 h-5';
   }
 };
 
 // Basic Icons
-export const SearchIcon: React.FC<IconProps> = ({ className = '', size }) => (
-  <svg className={`${getIconSize(size)} ${className}`} viewBox="0 0 24 24">
+export const SearchIcon: React.FC<IconProps> = ({ className = '', size, fill = 'none', stroke = 'currentColor', strokeWidth = 2 }) => (
+  <svg className={`${getIconSize(size)} ${className}`} viewBox="0 0 24 24" fill={fill} stroke={stroke} strokeWidth={strokeWidth}>
     <circle cx="11" cy="11" r="8" />
     <path d="m21 21-4.35-4.35" />
   </svg>
 );
 
-export const LoginIcon: React.FC<IconProps> = ({ className = '', size }) => (
-  <svg className={`${getIconSize(size)} ${className}`} viewBox="0 0 24 24">
+export const LoginIcon: React.FC<IconProps> = ({ className = '', size, fill = 'none', stroke = 'currentColor', strokeWidth = 2 }) => (
+  <svg className={`${getIconSize(size)} ${className}`} viewBox="0 0 24 24" fill={fill} stroke={stroke} strokeWidth={strokeWidth}>
     <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
     <polyline points="10,17 15,12 10,7" />
     <line x1="15" y1="12" x2="3" y2="12" />
   </svg>
 );
 
-export const PencilIcon: React.FC<IconProps> = ({ className = '', size }) => (
-  <svg className={`${getIconSize(size)} ${className}`} viewBox="0 0 24 24">
+export const PencilIcon: React.FC<IconProps> = ({ className = '', size, fill = 'none', stroke = 'currentColor', strokeWidth = 2 }) => (
+  <svg className={`${getIconSize(size)} ${className}`} viewBox="0 0 24 24" fill={fill} stroke={stroke} strokeWidth={strokeWidth}>
     <path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z" />
     <path d="m15 5 4 4" />
   </svg>
 );
 
-export const CalendarIcon: React.FC<IconProps> = ({ className = '', size }) => (
-  <svg className={`${getIconSize(size)} ${className}`} viewBox="0 0 24 24">
+export const CalendarIcon: React.FC<IconProps> = ({ className = '', size, fill = 'none', stroke = 'currentColor', strokeWidth = 2 }) => (
+  <svg className={`${getIconSize(size)} ${className}`} viewBox="0 0 24 24" fill={fill} stroke={stroke} strokeWidth={strokeWidth}>
     <path d="M8 2v4" />
     <path d="M16 2v4" />
     <rect width="18" height="18" x="3" y="4" rx="2" />
     <path d="M3 10h18" />
+  </svg>
+);
+
+// New Essential Icons
+export const SparklesIcon: React.FC<IconProps> = ({ className = '', size, fill = 'none', stroke = 'currentColor', strokeWidth = 2 }) => (
+  <svg className={`${getIconSize(size)} ${className}`} viewBox="0 0 24 24" fill={fill} stroke={stroke} strokeWidth={strokeWidth}>
+    <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.582a.5.5 0 0 1 0 .962L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z" />
+    <path d="M20 3v4" />
+    <path d="M22 5h-4" />
+    <path d="M4 17v2" />
+    <path d="M5 18H3" />
+  </svg>
+);
+
+export const ZapIcon: React.FC<IconProps> = ({ className = '', size, fill = 'none', stroke = 'currentColor', strokeWidth = 2 }) => (
+  <svg className={`${getIconSize(size)} ${className}`} viewBox="0 0 24 24" fill={fill} stroke={stroke} strokeWidth={strokeWidth}>
+    <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z" />
+  </svg>
+);
+
+export const EyeIcon: React.FC<IconProps> = ({ className = '', size, fill = 'none', stroke = 'currentColor', strokeWidth = 2 }) => (
+  <svg className={`${getIconSize(size)} ${className}`} viewBox="0 0 24 24" fill={fill} stroke={stroke} strokeWidth={strokeWidth}>
+    <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
+    <circle cx="12" cy="12" r="3" />
+  </svg>
+);
+
+export const CodeIcon: React.FC<IconProps> = ({ className = '', size, fill = 'none', stroke = 'currentColor', strokeWidth = 2 }) => (
+  <svg className={`${getIconSize(size)} ${className}`} viewBox="0 0 24 24" fill={fill} stroke={stroke} strokeWidth={strokeWidth}>
+    <polyline points="16,18 22,12 16,6" />
+    <polyline points="8,6 2,12 8,18" />
+  </svg>
+);
+
+export const LayersIcon: React.FC<IconProps> = ({ className = '', size, fill = 'none', stroke = 'currentColor', strokeWidth = 2 }) => (
+  <svg className={`${getIconSize(size)} ${className}`} viewBox="0 0 24 24" fill={fill} stroke={stroke} strokeWidth={strokeWidth}>
+    <path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z" />
+    <path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65" />
+    <path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65" />
+  </svg>
+);
+
+export const LayoutIcon: React.FC<IconProps> = ({ className = '', size, fill = 'none', stroke = 'currentColor', strokeWidth = 2 }) => (
+  <svg className={`${getIconSize(size)} ${className}`} viewBox="0 0 24 24" fill={fill} stroke={stroke} strokeWidth={strokeWidth}>
+    <rect width="18" height="18" x="3" y="3" rx="2" />
+    <path d="M9 3v18" />
+    <path d="M14 9h7" />
+  </svg>
+);
+
+export const PaletteIcon: React.FC<IconProps> = ({ className = '', size, fill = 'none', stroke = 'currentColor', strokeWidth = 2 }) => (
+  <svg className={`${getIconSize(size)} ${className}`} viewBox="0 0 24 24" fill={fill} stroke={stroke} strokeWidth={strokeWidth}>
+    <circle cx="13.5" cy="6.5" r=".5" fill="currentColor" />
+    <circle cx="17.5" cy="10.5" r=".5" fill="currentColor" />
+    <circle cx="8.5" cy="7.5" r=".5" fill="currentColor" />
+    <circle cx="6.5" cy="12.5" r=".5" fill="currentColor" />
+    <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z" />
+  </svg>
+);
+
+export const TypeIcon: React.FC<IconProps> = ({ className = '', size, fill = 'none', stroke = 'currentColor', strokeWidth = 2 }) => (
+  <svg className={`${getIconSize(size)} ${className}`} viewBox="0 0 24 24" fill={fill} stroke={stroke} strokeWidth={strokeWidth}>
+    <polyline points="4,7 4,4 20,4 20,7" />
+    <line x1="9" y1="20" x2="15" y2="20" />
+    <line x1="12" y1="4" x2="12" y2="20" />
+  </svg>
+);
+
+export const StarIcon: React.FC<IconProps> = ({ className = '', size, fill = 'none', stroke = 'currentColor', strokeWidth = 2 }) => (
+  <svg className={`${getIconSize(size)} ${className}`} viewBox="0 0 24 24" fill={fill} stroke={stroke} strokeWidth={strokeWidth}>
+    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+  </svg>
+);
+
+export const BookmarkIcon: React.FC<IconProps> = ({ className = '', size, fill = 'none', stroke = 'currentColor', strokeWidth = 2 }) => (
+  <svg className={`${getIconSize(size)} ${className}`} viewBox="0 0 24 24" fill={fill} stroke={stroke} strokeWidth={strokeWidth}>
+    <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z" />
+  </svg>
+);
+
+export const FilterIcon: React.FC<IconProps> = ({ className = '', size, fill = 'none', stroke = 'currentColor', strokeWidth = 2 }) => (
+  <svg className={`${getIconSize(size)} ${className}`} viewBox="0 0 24 24" fill={fill} stroke={stroke} strokeWidth={strokeWidth}>
+    <polygon points="22,3 2,3 10,12.46 10,19 14,21 14,12.46" />
+  </svg>
+);
+
+export const GridIcon: React.FC<IconProps> = ({ className = '', size, fill = 'none', stroke = 'currentColor', strokeWidth = 2 }) => (
+  <svg className={`${getIconSize(size)} ${className}`} viewBox="0 0 24 24" fill={fill} stroke={stroke} strokeWidth={strokeWidth}>
+    <rect width="7" height="7" x="3" y="3" rx="1" />
+    <rect width="7" height="7" x="14" y="3" rx="1" />
+    <rect width="7" height="7" x="14" y="14" rx="1" />
+    <rect width="7" height="7" x="3" y="14" rx="1" />
+  </svg>
+);
+
+export const ListIcon: React.FC<IconProps> = ({ className = '', size, fill = 'none', stroke = 'currentColor', strokeWidth = 2 }) => (
+  <svg className={`${getIconSize(size)} ${className}`} viewBox="0 0 24 24" fill={fill} stroke={stroke} strokeWidth={strokeWidth}>
+    <line x1="8" y1="6" x2="21" y2="6" />
+    <line x1="8" y1="12" x2="21" y2="12" />
+    <line x1="8" y1="18" x2="21" y2="18" />
+    <line x1="3" y1="6" x2="3.01" y2="6" />
+    <line x1="3" y1="12" x2="3.01" y2="12" />
+    <line x1="3" y1="18" x2="3.01" y2="18" />
+  </svg>
+);
+
+export const ShieldIcon: React.FC<IconProps> = ({ className = '', size, fill = 'none', stroke = 'currentColor', strokeWidth = 2 }) => (
+  <svg className={`${getIconSize(size)} ${className}`} viewBox="0 0 24 24" fill={fill} stroke={stroke} strokeWidth={strokeWidth}>
+    <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+  </svg>
+);
+
+export const TrendingUpIcon: React.FC<IconProps> = ({ className = '', size, fill = 'none', stroke = 'currentColor', strokeWidth = 2 }) => (
+  <svg className={`${getIconSize(size)} ${className}`} viewBox="0 0 24 24" fill={fill} stroke={stroke} strokeWidth={strokeWidth}>
+    <polyline points="22,7 13.5,15.5 8.5,10.5 2,17" />
+    <polyline points="16,7 22,7 22,13" />
+  </svg>
+);
+
+export const TargetIcon: React.FC<IconProps> = ({ className = '', size, fill = 'none', stroke = 'currentColor', strokeWidth = 2 }) => (
+  <svg className={`${getIconSize(size)} ${className}`} viewBox="0 0 24 24" fill={fill} stroke={stroke} strokeWidth={strokeWidth}>
+    <circle cx="12" cy="12" r="10" />
+    <circle cx="12" cy="12" r="6" />
+    <circle cx="12" cy="12" r="2" />
+  </svg>
+);
+
+export const RocketIcon: React.FC<IconProps> = ({ className = '', size, fill = 'none', stroke = 'currentColor', strokeWidth = 2 }) => (
+  <svg className={`${getIconSize(size)} ${className}`} viewBox="0 0 24 24" fill={fill} stroke={stroke} strokeWidth={strokeWidth}>
+    <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
+    <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" />
+    <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" />
+    <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
+  </svg>
+);
+
+export const AwardIcon: React.FC<IconProps> = ({ className = '', size, fill = 'none', stroke = 'currentColor', strokeWidth = 2 }) => (
+  <svg className={`${getIconSize(size)} ${className}`} viewBox="0 0 24 24" fill={fill} stroke={stroke} strokeWidth={strokeWidth}>
+    <path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526" />
+    <circle cx="12" cy="8" r="6" />
+  </svg>
+);
+
+export const ChatIcon: React.FC<IconProps> = ({ className = '', size, fill = 'none', stroke = 'currentColor', strokeWidth = 2 }) => (
+  <svg className={`${getIconSize(size)} ${className}`} viewBox="0 0 24 24" fill={fill} stroke={stroke} strokeWidth={strokeWidth}>
+    <path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2z" />
+    <path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1" />
   </svg>
 );
 
@@ -454,6 +604,25 @@ export const Icons = {
   Menu: MenuIcon,
   Plus: PlusIcon,
   Minus: MinusIcon,
+  Sparkles: SparklesIcon,
+  Zap: ZapIcon,
+  Eye: EyeIcon,
+  Code: CodeIcon,
+  Layers: LayersIcon,
+  Layout: LayoutIcon,
+  Palette: PaletteIcon,
+  Type: TypeIcon,
+  Star: StarIcon,
+  Bookmark: BookmarkIcon,
+  Filter: FilterIcon,
+  Grid: GridIcon,
+  List: ListIcon,
+  Shield: ShieldIcon,
+  TrendingUp: TrendingUpIcon,
+  Target: TargetIcon,
+  Rocket: RocketIcon,
+  Award: AwardIcon,
+  Chat: ChatIcon,
   
   // Arrows
   ArrowUp: ArrowUpIcon,

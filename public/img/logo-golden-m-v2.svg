@@ -1,0 +1,42 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Golden M Logo - V2: Refined 3D Architecture (matching reference) -->
+  
+  <!-- Left pillar with architectural details -->
+  <g>
+    <!-- Main pillar -->
+    <rect x="48" y="65" width="24" height="70" fill="#ffffff"/>
+    <!-- Top cap -->
+    <path d="M48 65 L58 55 L82 55 L72 65 Z" fill="#f0f0f0"/>
+    <!-- Right face -->
+    <path d="M72 65 L82 55 L82 125 L72 135 Z" fill="#e0e0e0"/>
+    <!-- Base -->
+    <rect x="46" y="130" width="28" height="8" fill="#d8d8d8"/>
+  </g>
+  
+  <!-- Right pillar with architectural details -->
+  <g>
+    <!-- Main pillar -->
+    <rect x="128" y="65" width="24" height="70" fill="#ffffff"/>
+    <!-- Top cap -->
+    <path d="M128 65 L138 55 L162 55 L152 65 Z" fill="#f0f0f0"/>
+    <!-- Right face -->
+    <path d="M152 65 L162 55 L162 125 L152 135 Z" fill="#e0e0e0"/>
+    <!-- Base -->
+    <rect x="126" y="130" width="28" height="8" fill="#d8d8d8"/>
+  </g>
+  
+  <!-- Connecting arch structure -->
+  <g>
+    <!-- Left diagonal beam -->
+    <path d="M72 65 L100 85 L96 92 L68 72 Z" fill="#ffffff"/>
+    <path d="M72 65 L76 60 L104 80 L100 85 Z" fill="#f0f0f0"/>
+    
+    <!-- Right diagonal beam -->
+    <path d="M100 85 L128 65 L132 72 L104 92 Z" fill="#ffffff"/>
+    <path d="M128 65 L132 60 L136 65 L132 72 Z" fill="#f0f0f0"/>
+    
+    <!-- Center keystone -->
+    <ellipse cx="100" cy="85" rx="8" ry="6" fill="#ffffff"/>
+    <ellipse cx="102" cy="83" rx="6" ry="4" fill="#f0f0f0"/>
+  </g>
+</svg>

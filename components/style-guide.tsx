@@ -47,7 +47,7 @@ const StyleGuide: React.FC = () => {
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 flex items-center justify-center">
                 <img 
-                  src="/img/logo-sharp.svg" 
+                  src="/img/logo-debug.svg" 
                   alt="DesignCost Logo" 
                   className="w-full h-full object-contain"
                 />
@@ -61,7 +61,7 @@ const StyleGuide: React.FC = () => {
               <a href="/buttons" className="footer-link">Buttons</a>
               <ThemeSwitcher />
               <Button size="sm" className="font-light tracking-[0.1px]">
-                <Icons.Login />
+                <Icons.Login className="mr-2" />
                 Get Started
               </Button>
             </nav>
@@ -220,7 +220,7 @@ const StyleGuide: React.FC = () => {
                 <Button size="sm" className="w-full">Small Primary</Button>
                 <Button size="lg" className="w-full">Large Primary</Button>
                 <Button className="w-full">
-                  <Icons.Check />
+                  <Icons.Check className="mr-2" />
                   With Icon
                 </Button>
               </div>
@@ -233,7 +233,7 @@ const StyleGuide: React.FC = () => {
                 <Button variant="outline-dark" className="w-full">Outline Button</Button>
                 <Button variant="ghost" className="w-full">Ghost Button</Button>
                 <Button variant="secondary" className="w-full">
-                  <Icons.Pencil />
+                  <Icons.Pencil className="mr-2" />
                   Edit
                 </Button>
               </div>

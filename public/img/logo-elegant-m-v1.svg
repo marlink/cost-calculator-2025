@@ -1,0 +1,24 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Elegant M Logo - V1: Sophisticated Typography (matching reference) -->
+  
+  <!-- Left vertical stroke with elegant proportions -->
+  <rect x="55" y="60" width="16" height="80" fill="#ffffff" rx="2"/>
+  
+  <!-- Left diagonal with refined angle -->
+  <path d="M71 60 L100 85 L94 92 L65 67 Z" fill="#ffffff"/>
+  
+  <!-- Right diagonal with matching refinement -->
+  <path d="M100 85 L129 60 L135 67 L106 92 Z" fill="#ffffff"/>
+  
+  <!-- Right vertical stroke with elegant proportions -->
+  <rect x="129" y="60" width="16" height="80" fill="#ffffff" rx="2"/>
+  
+  <!-- Refined center junction -->
+  <circle cx="100" cy="85" r="5" fill="#ffffff"/>
+  
+  <!-- Subtle serif details -->
+  <rect x="53" y="58" width="20" height="4" fill="#ffffff" rx="1"/>
+  <rect x="53" y="138" width="20" height="4" fill="#ffffff" rx="1"/>
+  <rect x="127" y="58" width="20" height="4" fill="#ffffff" rx="1"/>
+  <rect x="127" y="138" width="20" height="4" fill="#ffffff" rx="1"/>
+</svg>

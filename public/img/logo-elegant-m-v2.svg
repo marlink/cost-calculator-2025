@@ -1,0 +1,25 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Elegant M Logo - V2: Luxury Brand Style (matching reference) -->
+  
+  <!-- Left vertical with subtle width variation -->
+  <path d="M52 58 L68 58 L70 142 L50 142 Z" fill="#ffffff"/>
+  
+  <!-- Left diagonal with elegant curve -->
+  <path d="M68 58 Q85 70 100 88 L95 95 Q78 77 61 65 Z" fill="#ffffff"/>
+  
+  <!-- Right diagonal with matching elegance -->
+  <path d="M100 88 Q115 70 132 58 L139 65 Q122 77 105 95 Z" fill="#ffffff"/>
+  
+  <!-- Right vertical with subtle width variation -->
+  <path d="M132 58 L148 58 L150 142 L130 142 Z" fill="#ffffff"/>
+  
+  <!-- Sophisticated center element -->
+  <ellipse cx="100" cy="88" rx="7" ry="9" fill="#ffffff"/>
+  <ellipse cx="100" cy="86" rx="4" ry="5" fill="#f8f8f8"/>
+  
+  <!-- Luxury finishing touches -->
+  <path d="M52 58 Q60 54 68 58" fill="none" stroke="#ffffff" stroke-width="1"/>
+  <path d="M132 58 Q140 54 148 58" fill="none" stroke="#ffffff" stroke-width="1"/>
+  <path d="M50 142 Q60 146 70 142" fill="none" stroke="#ffffff" stroke-width="1"/>
+  <path d="M130 142 Q140 146 150 142" fill="none" stroke="#ffffff" stroke-width="1"/>
+</svg>

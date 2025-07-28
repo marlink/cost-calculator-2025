@@ -21,7 +21,7 @@ export default function ButtonsPage() {
               <a href="/calculator" className="text-slate-400 hover:text-white transition-colors font-light tracking-[0.1px]">Calculator</a>
               <a href="/icons" className="text-slate-400 hover:text-white transition-colors font-light tracking-[0.1px]">Icons</a>
               <Button size="sm" className="font-light tracking-[0.1px]">
-                <Icons.Login size="small" />
+                <Icons.Login className="mr-2" size="small" />
                 Get Started
               </Button>
             </nav>
@@ -51,15 +51,15 @@ export default function ButtonsPage() {
                 <h3 className="text-lg font-light text-white mb-4 tracking-[-0.01em]">Default Primary</h3>
                 <div className="flex flex-wrap gap-4 items-center">
                   <Button size="sm">
-                    <Icons.Plus />
+                    <Icons.Plus className="mr-2" />
                     Small
                   </Button>
                   <Button>
-                    <Icons.Check />
+                    <Icons.Check className="mr-2" />
                     Default
                   </Button>
                   <Button size="lg">
-                    <Icons.ArrowRight />
+                    <Icons.ArrowRight className="mr-2" />
                     Large
                   </Button>
                   <Button size="icon-sm">
@@ -79,15 +79,15 @@ export default function ButtonsPage() {
                 <h3 className="text-lg font-light text-white mb-4 tracking-[-0.01em]">Destructive</h3>
                 <div className="flex flex-wrap gap-4 items-center">
                   <Button variant="destructive" size="sm">
-                    <Icons.X />
+                    <Icons.X className="mr-2" />
                     Delete
                   </Button>
                   <Button variant="destructive">
-                    <Icons.X />
+                    <Icons.X className="mr-2" />
                     Remove
                   </Button>
                   <Button variant="destructive" size="lg">
-                    <Icons.X />
+                    <Icons.X className="mr-2" />
                     Delete Forever
                   </Button>
                   <Button variant="destructive" size="icon">
@@ -111,15 +111,15 @@ export default function ButtonsPage() {
                 <h3 className="text-lg font-medium text-slate-900 mb-4">Default Outline</h3>
                 <div className="flex flex-wrap gap-4 items-center">
                   <Button variant="outline" size="sm">
-                    <Icons.Download />
+                    <Icons.Download className="mr-2" />
                     Download
                   </Button>
                   <Button variant="outline">
-                    <Icons.Upload />
+                    <Icons.Upload className="mr-2" />
                     Upload
                   </Button>
                   <Button variant="outline" size="lg">
-                    <Icons.File />
+                    <Icons.File className="mr-2" />
                     Open File
                   </Button>
                   <Button variant="outline" size="icon">
@@ -133,15 +133,15 @@ export default function ButtonsPage() {
                 <h3 className="text-lg font-medium text-slate-900 mb-4">Primary Outline</h3>
                 <div className="flex flex-wrap gap-4 items-center">
                   <Button variant="outline-primary" size="sm">
-                    <Icons.Login />
+                    <Icons.Login className="mr-2" />
                     Sign In
                   </Button>
                   <Button variant="outline-primary">
-                    <Icons.User />
+                    <Icons.User className="mr-2" />
                     Profile
                   </Button>
                   <Button variant="outline-primary" size="lg">
-                    <Icons.Settings />
+                    <Icons.Settings className="mr-2" />
                     Settings
                   </Button>
                   <Button variant="outline-primary" size="icon">
@@ -155,15 +155,15 @@ export default function ButtonsPage() {
                 <h3 className="text-lg font-medium text-slate-900 mb-4">Destructive Outline</h3>
                 <div className="flex flex-wrap gap-4 items-center">
                   <Button variant="outline-destructive" size="sm">
-                    <Icons.X />
+                    <Icons.X className="mr-2" />
                     Cancel
                   </Button>
                   <Button variant="outline-destructive">
-                    <Icons.X />
+                    <Icons.X className="mr-2" />
                     Delete
                   </Button>
                   <Button variant="outline-destructive" size="lg">
-                    <Icons.X />
+                    <Icons.X className="mr-2" />
                     Remove Item
                   </Button>
                   <Button variant="outline-destructive" size="icon">
@@ -187,15 +187,15 @@ export default function ButtonsPage() {
                 <h3 className="text-lg font-light text-white mb-4 tracking-[-0.01em]">Default Dark Outline</h3>
                 <div className="flex flex-wrap gap-4 items-center">
                   <Button variant="outline-dark" size="sm">
-                    <Icons.Sun />
+                    <Icons.Sun className="mr-2" />
                     Light Mode
                   </Button>
                   <Button variant="outline-dark">
-                    <Icons.Computer />
+                    <Icons.Computer className="mr-2" />
                     Desktop
                   </Button>
                   <Button variant="outline-dark" size="lg">
-                    <Icons.Smartphone />
+                    <Icons.Smartphone className="mr-2" />
                     Mobile View
                   </Button>
                   <Button variant="outline-dark" size="icon">

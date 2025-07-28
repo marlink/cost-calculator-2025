@@ -15,7 +15,7 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 flex items-center justify-center">
                 <img 
-                  src="/img/logo-sharp.svg" 
+                  src="/img/logo-circle-m.svg" 
                   alt="DesignCost Logo" 
                   className="w-full h-full object-contain"
                 />

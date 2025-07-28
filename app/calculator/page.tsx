@@ -25,7 +25,7 @@ export default function CalculatorPage() {
               <a href="/icons" className="footer-link">Icons</a>
               <a href="/buttons" className="footer-link">Buttons</a>
               <Button size="sm" className="font-light tracking-[0.1px]">
-                <Icons.Login />
+                <Icons.Login className="mr-2" />
                 Get Started
               </Button>
             </nav>
